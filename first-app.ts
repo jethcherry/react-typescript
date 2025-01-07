@@ -23,3 +23,7 @@ user = {
   isAdmin: true,
   id: "abc",
 };
+
+// let hobbies: Array<string>;
+let hobbies: string[] | number[] | boolean[];
+hobbies = ["Sports", "Cooking", "Reading"];
