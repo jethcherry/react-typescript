@@ -57,11 +57,45 @@ type AddFn = (a: number, b: number) => number;
 type StringOrNum = string | number;
 
 interface Credentials {
-  passord: string;
+  password: string;
   email: string;
 }
 let creds: Credentials;
 creds = {
-  passord: "abc",
+  password: "abc",
   email: "testexample@gmail.com",
+};
+
+class AuthCredentials implements Credentials {
+  email: string;
+  password: string;
+  userName: string;
+
+  constructor(email: string, password: string, userName: string) {
+    this.email = email;
+    this.password = password;
+    this.userName = userName;
+  }
+}
+
+function Login(credentials: Credentials) {}
+
+Login(new AuthCredentials("testexample@gmail.com", "abc", "codesofts"));
+
+//merging types
+type Admin = {
+  permissions: string[];
+};
+
+type AppUser = {
+  userName: string[];
+};
+
+type AppAdmin = Admin & AppUser;
+
+let admin: AppAdmin;
+
+admin = {
+  permissions: ["login"],
+  userName: ["testcode"],
 };
