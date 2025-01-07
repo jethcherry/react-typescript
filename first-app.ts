@@ -29,7 +29,7 @@ let hobbies: string[] | number[] | boolean[];
 hobbies = ["Sports", "Cooking", "Reading"];
 const API: string = "asgfhfjffkkfjrrirfrfrf";
 
-function add(a: string, b: number) {
+function add(a: number, b: number) {
   const result = a + b;
   console.log(result);
 }
