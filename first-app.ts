@@ -113,8 +113,20 @@ interface AppAdmin extends Admin, AppUser {
   userName: ["MAX"];
 }
 
-let role: "admin" | "user" | "editor";
+type Role = "admin" | "user" | "editor";
+
+let role: Role;
 
 role = "admin";
 role = "user";
 role = "editor";
+
+function PerfomAction(action: string | number, role: Role) {
+  if (role == "admin" && typeof action === "string") {
+  }
+}
+
+//generic types
+
+let roles: Array<Role>;
+roles = ["admin", "editor"];
