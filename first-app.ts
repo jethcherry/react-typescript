@@ -16,6 +16,12 @@ let user: {
   isAdmin: boolean;
   id: string | number;
 };
+type user = {
+  name: string;
+  age: number;
+  isAdmin: boolean;
+  id: string | number;
+};
 
 user = {
   name: "MAX",
@@ -33,3 +39,17 @@ function add(a: number, b: number) {
   const result = a + b;
   console.log(result);
 }
+
+function calculate(
+  a: number,
+  b: number,
+  calFn: (a: number, b: number) => number
+) {
+  calFn(a, b);
+}
+
+// calculate(2,5,add())
+
+type AddFn = (a: number, b: number) => number;
+
+type StringOrNum = string | number;
