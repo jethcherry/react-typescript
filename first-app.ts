@@ -56,5 +56,12 @@ type AddFn = (a: number, b: number) => number;
 
 type StringOrNum = string | number;
 
-
-
+interface Credentials {
+  passord: string;
+  email: string;
+}
+let creds: Credentials;
+creds = {
+  passord: "abc",
+  email: "testexample@gmail.com",
+};
