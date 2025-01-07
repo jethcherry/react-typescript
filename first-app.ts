@@ -27,3 +27,9 @@ user = {
 // let hobbies: Array<string>;
 let hobbies: string[] | number[] | boolean[];
 hobbies = ["Sports", "Cooking", "Reading"];
+const API: string = "asgfhfjffkkfjrrirfrfrf";
+
+function add(a: string, b: number) {
+  const result = a + b;
+  console.log(result);
+}
