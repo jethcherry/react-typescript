@@ -83,19 +83,38 @@ function Login(credentials: Credentials) {}
 Login(new AuthCredentials("testexample@gmail.com", "abc", "codesofts"));
 
 //merging types
-type Admin = {
+// type Admin = {
+//   permissions: string[];
+// };
+
+// type AppUser = {
+//   userName: string[];
+// };
+
+// type AppAdmin = Admin & AppUser;
+
+// let admin: AppAdmin;
+
+// admin = {
+//   permissions: ["login"],
+//   userName: ["testcode"],
+// };
+
+interface Admin {
   permissions: string[];
-};
+}
 
-type AppUser = {
+interface AppUser {
   userName: string[];
-};
+}
 
-type AppAdmin = Admin & AppUser;
+interface AppAdmin extends Admin, AppUser {
+  permision: ["login"];
+  userName: ["MAX"];
+}
 
-let admin: AppAdmin;
+let role: "admin" | "user" | "editor";
 
-admin = {
-  permissions: ["login"],
-  userName: ["testcode"],
-};
+role = "admin";
+role = "user";
+role = "editor";
