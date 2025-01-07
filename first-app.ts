@@ -16,12 +16,14 @@ let user: {
   isAdmin: boolean;
   id: string | number;
 };
-type user = {
+
+type User = {
   name: string;
   age: number;
   isAdmin: boolean;
   id: string | number;
 };
+let person: User;
 
 user = {
   name: "MAX",
