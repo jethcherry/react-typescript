@@ -80,4 +80,22 @@ class AuthCredentials implements Credentials {
 
 function Login(credentials: Credentials) {}
 
-Login(new AuthCredentials("testexample@gmail.com","abc","codesofts"));
+Login(new AuthCredentials("testexample@gmail.com", "abc", "codesofts"));
+
+//merging types
+type Admin = {
+  permissions: string[];
+};
+
+type AppUser = {
+  userName: string[];
+};
+
+type AppAdmin = Admin & AppUser;
+
+let admin: AppAdmin;
+
+admin = {
+  permissions: ["login"],
+  userName: ["testcode"],
+};
